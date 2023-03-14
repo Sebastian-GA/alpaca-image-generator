@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
+
+/* ----- BASE ----- */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --font: "Montserrat", sans-serif;
+    --dark-blue: #001534;
+}
+
+html,
+body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* ----- HEADER ----- */
+.header-title {
+    font-family: var(--font);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+/* ----- MAIN ----- */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.img-side {
+    min-width: max-content;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.img-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+}
+.img-container img {
+    position: absolute;
+    width: 100%;
+}
+.img-btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+}
+.img-btns button {
+    width: 100%;
+    padding: 0.8rem 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--dark-blue);
+    color: #fff;
+
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.img-btns button:hover {
+    background-color: #fff;
+    color: var(--dark-blue);
+}
+
+.customize-side {
+    width: 100%;
+    background-color: green;
+}
+
+@media screen and (min-width: 768px) {
+    .main-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .img-side {
+        min-width: max-content;
+        width: 25%;
+    }
+    .customize-side {
+        width: auto;
+    }
+}
+
+/* ----- FOOTER ----- */
+.footer-text {
+    font-family: var(--font);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    text-align: center;
+}
+.footer-text a {
+    color: var(--dark-blue);
+    text-decoration: none;
+}
