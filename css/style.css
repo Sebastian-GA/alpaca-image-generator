@@ -8,11 +8,13 @@
 :root {
     --font: "Montserrat", sans-serif;
     --dark-blue: #001534;
+    --background: #eeecee;
 }
 
 html,
 body {
     height: 100%;
+    background-color: var(--background);
 }
 body {
     display: flex;
@@ -36,6 +38,8 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    height: 100%;
+    overflow: hidden;
 }
 
 .img-side {
@@ -80,8 +84,45 @@ body {
 }
 
 .customize-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
     width: 100%;
-    background-color: green;
+    max-height: 100%;
+    overflow: auto;
+
+    background-color: var(--dark-blue);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+.section-customize {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.section-title {
+    font-family: var(--font);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+}
+.section-customize div {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+}
+.custom-option {
+    aspect-ratio: 1;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0.5rem;
+    padding-top: 4px;
+    background: none;
+    cursor: pointer;
+}
+.custom-option img {
+    width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -94,7 +135,8 @@ body {
         width: 25%;
     }
     .customize-side {
-        width: auto;
+        width: 50%;
+        height: 80%;
     }
 }
 
