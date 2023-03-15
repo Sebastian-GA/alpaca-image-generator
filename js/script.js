@@ -26,3 +26,15 @@ btn_random.addEventListener("click", () => {
         btns_container.children[Math.floor(Math.random() * btns_container.childElementCount)].click();
     });
 });
+
+// Download button
+const btn_download = document.getElementById("btn-download");
+btn_download.addEventListener("click", () => {
+    const img_container = document.getElementsByClassName("img-container")[0];
+    html2canvas(img_container).then((canvas) => {
+        const download_link = document.createElement("a");
+        download_link.href = canvas.toDataURL("image/png");
+        download_link.download = "Alpaca.png";
+        download_link.click();
+    });
+});
