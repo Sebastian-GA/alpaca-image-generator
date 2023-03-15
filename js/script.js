@@ -16,3 +16,13 @@ img_sections.forEach((section) => {
         });
     });
 });
+
+// Randomize button
+const btn_random = document.getElementById("btn-random");
+btn_random.addEventListener("click", () => {
+    img_sections.forEach((section) => {
+        const btns_container = document.getElementById("customize-" + section).children[1];
+        // Select a random option and make click on button
+        btns_container.children[Math.floor(Math.random() * btns_container.childElementCount)].click();
+    });
+});
