@@ -124,6 +124,10 @@ body {
 .custom-option img {
     width: 100%;
 }
+.custom-option span {
+    color: red;
+    font-size: 1.7rem;
+}
 
 @media screen and (min-width: 768px) {
     .main-container {
