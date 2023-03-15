@@ -59,13 +59,13 @@ body {
     position: absolute;
     width: 100%;
 }
-.img-btns {
+.img-btns-container {
     display: flex;
     justify-content: space-between;
     gap: 0.5rem;
     width: 100%;
 }
-.img-btns button {
+.img-btns-container button {
     width: 100%;
     padding: 0.8rem 0.5rem;
     border: none;
@@ -78,7 +78,7 @@ body {
     font-weight: 500;
     cursor: pointer;
 }
-.img-btns button:hover {
+.img-btns-container button:hover {
     background-color: #fff;
     color: var(--dark-blue);
 }
